@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Local Community Event Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <section class="events-section">
+      <h2>Upcoming Events</h2>
+      <div id="selected-events"></div>
+    </section>
+
+    <section class="register-section">
+      <h2>Register for an Event</h2>
+      <form id="register-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name <span aria-hidden="true">*</span></label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+          <span class="error-message" aria-live="assertive"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          <span class="error-message" aria-live="assertive"></span>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" type="tel" placeholder="Optional" />
+          <span class="error-message" aria-live="assertive"></span>
+        </div>
+        <div class="form-group">
+          <label for="comments">Comments / Notes</label>
+          <textarea id="comments" name="comments" rows="3" placeholder="Optional"></textarea>
+          <span class="error-message" aria-live="assertive"></span>
+        </div>
+        <div class="form-group">
+          <label for="event">Event <span aria-hidden="true">*</span></label>
+          <input list="events-list" id="event" name="event" placeholder="Select or type event name" required />
+          <datalist id="events-list"></datalist>
+          <span class="error-message" aria-live="assertive"></span>
+        </div>
+        <button type="submit">Register</button><br>
+      </form><center>
+      <button id="registerBtn">Register (jQuery)</button></center>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
